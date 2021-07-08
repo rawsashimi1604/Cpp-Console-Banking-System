@@ -10,7 +10,7 @@ using namespace std;
 
 /*
     THINGS TO DO :
-        CHANGE BAL TO 2 digits
+        
  */
 
 string getFileContents(ifstream& File) // Solution from http://www.cplusplus.com/forum/general/58945/ TheMassiveChipmunk 
@@ -202,7 +202,7 @@ void Bank::infoScreen()
     header();
     cout << "   Made by Gavin Loo / rawsashimi1604 " << endl;
     cout << "   Github Link : https://github.com/rawsashimi1604/" << endl;
-    cout << "   Version : v0.01" << endl;
+    cout << "   Version : v0.02" << endl;
     cout << "   Version Made : 08-07-2021 " << endl;
 
     cout << " \n\n";
