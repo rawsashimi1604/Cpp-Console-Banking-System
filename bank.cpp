@@ -48,10 +48,14 @@ class Bank
 {
     public:
         void header();
+        // MENUS
         void mainMenu();
         void loginScreen();
         void registerScreen();
         void infoScreen();
+        void bankMenuScreen();
+
+        // OTHER FUNCTIONS
         bool createUser(const string username, const string password);
         bool authenticateUser(const string usernameAttempt);
         bool authenticatePassword(const string usernameAttempt, const string passwordAttempt);
@@ -109,7 +113,7 @@ void Bank::mainMenu()
                 cout << "   QUIT INITIALIZED...\n";
                 Sleep(500);
                 option = 4;
-                break;
+                exit(0);
 
             default:
                 cout << "   INVALID OPTION.\n";
@@ -134,6 +138,7 @@ void Bank::loginScreen()
             authenticated = true;
             cout << "   Login Successful!" << endl;
             Sleep(500);
+            bankMenuScreen();
         }
         else
         {
@@ -191,6 +196,69 @@ void Bank::infoScreen()
 
     system("PAUSE");
     mainMenu();
+}
+
+void Bank::bankMenuScreen()
+{
+    system("cls");
+    header();
+
+    int option;
+    while(1)
+    {
+        cout << "   Please choose your option." << endl;
+        cout << "   1 : BANK BALANCE" << endl;
+        cout << "   2 : DEPOSIT MONEY" << endl;
+        cout << "   3 : WITHDRAW MONEY" << endl;
+        cout << "   4 : TRANSFER MONEY" << endl;
+        cout << "   5 : QUIT" << endl;
+        cout << "\n\n";
+        cout << "   Option : "; cin >> option;
+
+        switch(option)
+        {
+            case 1:
+                cout << "   BANK BALANCE INITIALIZED...\n";
+                Sleep(500);
+                // bankbalance
+                bankMenuScreen();
+                break;
+
+            case 2:
+                cout << "   DEPOSIT MONEY INITIALIZED...\n";
+                Sleep(500);
+                // despositmoney
+                bankMenuScreen();
+                break;
+            
+            case 3:
+                cout << "   WITHDRAW MONEY INITIALIZED...\n";
+                Sleep(500);
+                // withdrawmoney
+                bankMenuScreen();
+                break;
+            
+            case 4:
+                cout << "   TRANSFER MONEY INITIALIZED...\n";
+                Sleep(500);
+                // transfermoney
+                bankMenuScreen();
+                break;
+            
+            case 5:
+                cout << "   LOGOUT INITIALIZED...\n"; // Go back to MAIN MENU
+                Sleep(500);
+                mainMenu();
+                break;
+
+            default:
+                cout << "   INVALID OPTION.\n";
+                cout << "   Please choose an option from 1 to 5.\n";
+                Sleep(1000);
+                bankMenuScreen();
+                break;   
+        }
+    }
 }
 
 bool Bank::createUser(const string username, const string password)
