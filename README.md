@@ -1,4 +1,6 @@
-# C-Console-Banking-System
+# Cpp-Console-Banking-System
+![cpp-banking-image](https://github.com/rawsashimi1604/Cpp-Console-Banking-System/blob/master/images/Cpp_banking.PNG)
+
 Hey guys :blush: ! This is a simple banking console system I made using C++. I learnt the basics on W3Schools and various youtube tutorials and then decided to try to create a
 banking system to apply what I have learnt on a project. I also learnt Object Oriented Programming on C++ through this project. The font art was made using [ASCII Art](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
 .
